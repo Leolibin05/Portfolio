@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leo Libin | Project Management &amp; Operations Specialist</title>
+<meta name="description" content="Portfolio of Leo Libin, a Project Management and Operations Specialist with 4+ years of experience in operational excellence, PMO practices, and MIS automation.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23081b2c'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='46' fill='%23b7f34a' text-anchor='middle'%3ELL%3C/text%3E%3C/svg%3E">
+<style>
+  /* ============ TOKENS ============ */
+  :root {
+    --bg: #f7f8f3;
+    --bg-elevated: #081b2c;
+    --text: #081b2c;
+    --text-on-elevated: #ffffff;
+    --muted: #62717d;
+    --muted-on-elevated: #9cb0b9;
+    --accent: #b7f34a;
+    --ink-fixed: #081b2c;
+    --line: rgba(8, 27, 44, 0.14);
+    --line-on-elevated: rgba(255, 255, 255, 0.14);
+    --card-bg: #ffffff;
+    --contact-bg: #dce7e2;
+    --shadow-color: var(--accent);
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    --bg: #070f18;
+    --bg-elevated: #11263c;
+    --text: #f3f4ef;
+    --text-on-elevated: #ffffff;
+    --muted: #8ea0ab;
+    --muted-on-elevated: #a7bac3;
+    --accent: #b7f34a;
+    --line: rgba(243, 244, 239, 0.14);
+    --line-on-elevated: rgba(255, 255, 255, 0.14);
+    --card-bg: #0e1c2c;
+    --contact-bg: #0f231d;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  img, svg { display: block; max-width: 100%; }
+  ul { list-style: none; }
+  a { color: inherit; text-decoration: none; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.4s ease, color 0.4s ease;
+  }
+
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+
+  .wrap { max-width: 1400px; margin: 0 auto; padding-left: max(5vw, 24px); padding-right: max(5vw, 24px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  }
+
+  /* ============ REVEAL ANIMATION (progressive enhancement: hidden only once .js is confirmed) ============ */
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .js .reveal-stagger > * { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.02s; }
+  .reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.08s; }
+  .reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.14s; }
+  .reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.2s; }
+  .reveal-stagger.in-view > *:nth-child(5) { transition-delay: 0.26s; }
+  .reveal-stagger.in-view > *:nth-child(6) { transition-delay: 0.32s; }
+  .reveal-stagger.in-view > *:nth-child(7) { transition-delay: 0.38s; }
+  .reveal-stagger.in-view > *:nth-child(8) { transition-delay: 0.44s; }
+  .reveal-stagger.in-view > *:nth-child(9) { transition-delay: 0.5s; }
+  .reveal-stagger.in-view > *:nth-child(10) { transition-delay: 0.56s; }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; justify-content: space-between; align-items: center;
+    height: 84px; padding: 0 max(5vw, 24px);
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.4s ease, border-color 0.4s ease;
+  }
+  .monogram {
+    display: grid; place-items: center; width: 43px; height: 43px;
+    border: 1.5px solid var(--text); border-radius: 50%;
+    font-weight: 900; letter-spacing: -0.05em;
+  }
+  .nav-links { display: flex; align-items: center; gap: 30px; font-size: 0.87rem; font-weight: 700; }
+  .nav-links a { transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 0.6; }
+  .nav-right { display: flex; align-items: center; gap: 22px; }
+
+  .theme-toggle {
+    display: grid; place-items: center; width: 38px; height: 38px;
+    border: 1.5px solid var(--line); border-radius: 50%;
+    background: none; cursor: pointer; color: var(--text);
+    transition: transform 0.4s ease, border-color 0.3s ease, background 0.3s ease;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+  .theme-toggle svg { width: 17px; height: 17px; transition: transform 0.5s ease, opacity 0.3s ease; }
+  .theme-toggle .icon-moon { display: none; }
+  [data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+  [data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+
+  .nav-cta {
+    display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 4px; font-size: 0.88rem; font-weight: 800;
+  }
+  .nav-cta svg { width: 15px; height: 15px; }
+
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+  }
+
+  /* ============ BUTTONS ============ */
+  .button {
+    display: inline-flex; align-items: center; gap: 10px;
+    min-height: 52px; padding: 0 22px; border-radius: 4px;
+    font-size: 0.9rem; font-weight: 800;
+    transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  }
+  .button svg { width: 16px; height: 16px; }
+  .button:hover { transform: translateY(-2px); }
+  .button.primary { background: var(--ink-fixed); color: #fff; }
+  [data-theme="dark"] .button.primary { background: var(--accent); color: var(--ink-fixed); }
+  .button.secondary { border: 1.5px solid var(--line); color: var(--text); }
+  .button.secondary:hover { border-color: var(--accent); }
+
+  /* ============ HERO ============ */
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.6fr);
+    align-items: center; gap: clamp(46px, 7vw, 110px);
+    max-width: 1400px; margin: 0 auto; min-height: 640px;
+    padding: 70px max(5vw, 24px) 76px;
+  }
+  .availability {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 26px; font-size: 0.71rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.16em;
+  }
+  .availability i {
+    width: 9px; height: 9px; border-radius: 50%; background: #58b827;
+    box-shadow: 0 0 0 5px rgba(88, 184, 39, 0.15);
+    font-style: normal;
+  }
+  .hero h1 {
+    font-size: clamp(4.6rem, 9.5vw, 8.6rem); line-height: 0.78;
+    letter-spacing: -0.06em;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero-role {
+    margin: 42px 0 18px; font-size: clamp(1rem, 1.6vw, 1.4rem);
+    font-weight: 800; letter-spacing: -0.02em;
+  }
+  .hero-role span { padding: 0 8px; color: var(--muted); }
+  .hero-intro { max-width: 620px; color: var(--muted); font-size: 1.05rem; line-height: 1.75; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+
+  .hero-panel {
+    background: var(--bg-elevated); color: var(--text-on-elevated);
+    padding: 24px; box-shadow: 20px 20px 0 var(--shadow-color);
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+  }
+  .hero-photo {
+    width: 100%; aspect-ratio: 3 / 4; margin-bottom: 22px;
+    display: flex; align-items: flex-end; justify-content: center;
+    overflow: hidden; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.18) 100%);
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .panel-kicker {
+    display: flex; align-items: center; gap: 9px;
+    padding-bottom: 20px; margin-bottom: 20px;
+    border-bottom: 1px solid var(--line-on-elevated);
+    color: var(--accent); font-size: 0.7rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.15em;
+  }
+  .panel-kicker svg { width: 13px; height: 13px; }
+  .stat { display: flex; align-items: baseline; gap: 14px; padding: 11px 0; }
+  .stat strong { font-family: Georgia, serif; font-size: 1.9rem; font-weight: 400; color: var(--accent); min-width: 52px; }
+  .stat span { font-size: 0.82rem; line-height: 1.4; color: var(--muted-on-elevated); }
+  .hero-location {
+    display: flex; align-items: center; gap: 9px;
+    margin-top: 18px; padding-top: 18px;
+    border-top: 1px solid var(--line-on-elevated);
+    font-size: 0.8rem; color: var(--muted-on-elevated);
+  }
+  .hero-location svg { width: 14px; height: 14px; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding-top: 46px; }
+    .hero-panel { max-width: 420px; }
+  }
+
+  /* ============ MARQUEE ============ */
+  .marquee {
+    background: var(--accent); padding: 22px 0; overflow: hidden;
+    transform: rotate(-1deg) scale(1.02);
+  }
+  .marquee-track { display: flex; width: max-content; animation: scrollmarquee 38s linear infinite; }
+  .marquee-track span {
+    display: flex; align-items: center; gap: clamp(14px, 3vw, 45px);
+    white-space: nowrap; padding-right: clamp(14px, 3vw, 45px);
+    font-size: 0.78rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--ink-fixed);
+  }
+  .marquee-track i { font-style: normal; }
+  @keyframes scrollmarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ============ SECTION SHARED ============ */
+  .section { padding: 108px max(5vw, 24px); max-width: 1400px; margin: 0 auto; }
+  .section-title { display: grid; grid-template-columns: 0.7fr 1.5fr; gap: 50px; margin-bottom: 62px; }
+  .eyebrow {
+    font-size: 0.7rem; font-weight: 900; text-transform: uppercase;
+    letter-spacing: 0.16em; color: var(--muted);
+  }
+  .section-title h2 {
+    max-width: 780px; font-size: clamp(2.5rem, 4.6vw, 4.6rem);
+    line-height: 1.04; letter-spacing: -0.04em;
+  }
+  @media (max-width: 760px) { .section-title { grid-template-columns: 1fr; gap: 22px; } .section { padding: 76px max(5vw,24px); } }
+
+  /* ============ ABOUT ============ */
+  .about .section-title { display: block; margin-bottom: 44px; }
+  .about-content { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 45px; align-items: start; }
+  .about-content .lead { font-size: 1.15rem; line-height: 1.7; }
+  .about-content p:not(.lead) { color: var(--muted); font-size: 0.98rem; line-height: 1.8; }
+  @media (max-width: 760px) { .about-content { grid-template-columns: 1fr; } }
+
+  /* ============ COMPETENCIES ============ */
+  .competencies > .eyebrow { display: block; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .competency-grid { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 4px; }
+  .competency {
+    display: flex; align-items: center; gap: 24px; min-height: 82px;
+    border-bottom: 1px solid var(--line);
+  }
+  .competency:nth-child(odd) { border-right: 1px solid var(--line); padding-right: 28px; }
+  .competency span { font-family: Georgia, serif; color: var(--muted); font-size: 0.95rem; }
+  @media (max-width: 640px) {
+    .competency-grid { grid-template-columns: 1fr; }
+    .competency:nth-child(odd) { border-right: none; padding-right: 0; }
+  }
+
+  /* ============ EXPERIENCE (TIMELINE) ============ */
+  .experience { background: var(--bg-elevated); color: var(--text-on-elevated); transition: background 0.4s ease; }
+  .experience .eyebrow { color: var(--accent); }
+  .company-row {
+    display: flex; justify-content: space-between; align-items: end;
+    padding: 22px 0; font-size: 0.83rem; color: var(--muted-on-elevated);
+    border-top: 1px solid var(--line-on-elevated); border-bottom: 1px solid var(--line-on-elevated);
+    margin-bottom: 8px;
+  }
+  .company-row .company { font-size: 1.2rem; font-weight: 900; color: var(--text-on-elevated); margin-bottom: 3px; }
+
+  .timeline { position: relative; padding-left: 34px; margin-top: 44px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 5px; top: 10px; bottom: 10px; width: 2px;
+    background: var(--line-on-elevated);
+  }
+  .timeline-fill {
+    position: absolute; left: 5px; top: 10px; width: 2px; height: 0%;
+    background: var(--accent); transition: height 1.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .timeline.in-view .timeline-fill { height: calc(100% - 20px); }
+
+  .tl-node { position: relative; padding-bottom: 56px; }
+  .tl-node:last-child { padding-bottom: 0; }
+  .tl-dot {
+    position: absolute; left: -34px; top: 6px; width: 12px; height: 12px;
+    border-radius: 50%; background: var(--bg-elevated); border: 2px solid var(--muted-on-elevated);
+    transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s ease;
+  }
+  .tl-node.in-view .tl-dot { border-color: var(--accent); background: var(--accent); transform: scale(1.15); }
+  .tl-node.current .tl-dot { background: var(--accent); border-color: var(--accent); }
+
+  .role-tag {
+    display: inline-block; padding: 6px 10px; border-radius: 2px;
+    background: rgba(255,255,255,0.08); color: var(--muted-on-elevated);
+    font-size: 0.64rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.13em;
+    margin-bottom: 14px;
+  }
+  .tl-node.current .role-tag { background: var(--accent); color: var(--ink-fixed); }
+  .tl-node h3 { font-size: clamp(1.5rem, 2.4vw, 2.1rem); margin-bottom: 4px; }
+  .tl-node .role-dates { font-size: 0.8rem; color: var(--muted-on-elevated); margin-bottom: 22px; }
+  .tl-node ul { margin-bottom: 22px; }
+  .tl-node li {
+    position: relative; padding: 12px 0 12px 26px; line-height: 1.65;
+    color: rgb(210, 220, 226); border-top: 1px solid var(--line-on-elevated);
+    font-size: 0.94rem;
+  }
+  .tl-node li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
+  .impact {
+    padding: 18px 20px; border-left: 3px solid var(--accent);
+    background: rgba(255,255,255,0.05); font-size: 0.9rem; line-height: 1.65;
+    color: rgb(216, 224, 229);
+  }
+  .impact span {
+    display: block; margin-bottom: 6px; color: var(--accent);
+    font-size: 0.66rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.14em;
+  }
+
+  .promotion-marker {
+    position: relative; display: flex; align-items: center; gap: 14px;
+    padding: 16px 0 40px 2px; margin-left: -1px;
+  }
+  .promotion-marker .tl-dot { position: absolute; left: -34px; top: 20px; }
+  .promotion-marker svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+  .promotion-marker p { font-size: 0.86rem; color: var(--muted-on-elevated); }
+  .promotion-marker strong { color: var(--text-on-elevated); font-weight: 800; }
+
+  /* ============ SKILLS ============ */
+  .skills-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; margin-top: 6px; }
+  .skill-cat-title {
+    font-family: Arial, Helvetica, sans-serif; font-size: 0.72rem; font-weight: 900;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted);
+    padding-bottom: 16px; margin-bottom: 26px; border-bottom: 1px solid var(--line);
+  }
+  .skill-bar-row { margin-bottom: 26px; }
+  .skill-bar-row:last-child { margin-bottom: 0; }
+  .skill-bar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+  .skill-bar-head span:first-child { font-size: 0.98rem; font-weight: 700; }
+  .skill-bar-rating { font-size: 0.78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .skill-bar-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+  .skill-bar-track { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+  .skill-bar-fill {
+    height: 100%; width: 0; border-radius: 3px; background: var(--accent);
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .skill-bar-row.in-view .skill-bar-fill { width: var(--pct); transition-delay: calc(var(--i, 0) * 90ms); }
+  @media (max-width: 900px) {
+    .skills-groups { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  /* ============ EDUCATION / FOUNDATION ============ */
+  .foundation-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .foundation-card {
+    min-height: 300px; padding: 32px; border: 1px solid var(--line);
+    background: var(--card-bg); transition: background 0.4s ease, transform 0.3s ease;
+  }
+  .foundation-card:hover { transform: translateY(-3px); }
+  .foundation-card svg { width: 28px; height: 28px; margin-bottom: 40px; color: var(--accent); }
+  .card-label { font-size: 0.67rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 16px; }
+  .foundation-card h3 { font-size: 1.4rem; margin-bottom: 10px; line-height: 1.25; }
+  .foundation-card p:not(.card-label) { color: var(--muted); line-height: 1.6; font-size: 0.92rem; }
+  .foundation-card strong { display: block; margin-top: 14px; font-size: 0.9rem; }
+  .award-card { background: var(--accent); }
+  .award-card .card-label, .award-card p:not(.card-label) { color: rgb(43, 58, 44); }
+  .award-card svg { color: var(--ink-fixed); }
+  .cert-card { grid-column: 1 / -1; min-height: 0; }
+  .cert-card ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 40px; }
+  .cert-card li { display: flex; gap: 10px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 0.92rem; }
+  .cert-card li svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .providers { margin-top: 14px; font-size: 0.8rem; color: var(--muted); }
+  @media (max-width: 760px) {
+    .foundation-grid { grid-template-columns: 1fr; }
+    .cert-card ul { grid-template-columns: 1fr; }
+  }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    background: var(--contact-bg); display: grid; grid-template-columns: 1.2fr 0.8fr;
+    align-items: center; gap: 60px; padding: 100px max(5vw, 24px);
+    transition: background 0.4s ease;
+  }
+  .contact h2 { font-size: clamp(2.6rem, 6vw, 5.2rem); line-height: 1; letter-spacing: -0.05em; margin-top: 18px; }
+  .contact h2 em { font-style: normal; color: var(--accent); }
+  .contact-card {
+    display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 16px;
+    padding: 30px; background: var(--card-bg); border: 1px solid var(--line);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .contact-card:hover { transform: translateY(-3px); box-shadow: 10px 10px 0 var(--accent); }
+  .contact-card svg { width: 24px; height: 24px; color: var(--accent); }
+  .contact-card strong { display: block; font-size: 1.05rem; margin-bottom: 3px; }
+  .contact-card small { color: var(--muted); font-size: 0.84rem; }
+  @media (max-width: 760px) { .contact { grid-template-columns: 1fr; gap: 30px; text-align: left; } }
+
+  /* ============ FOOTER ============ */
+  footer {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 24px;
+    min-height: 100px; padding: 26px max(5vw, 24px);
+    background: var(--bg-elevated); color: var(--muted-on-elevated); font-size: 0.76rem;
+    transition: background 0.4s ease;
+  }
+  footer .monogram.inverted { color: #fff; border-color: rgba(255,255,255,0.4); }
+  footer .footer-meta { margin-right: auto; }
+  footer .footer-meta p:first-child { color: var(--text-on-elevated); font-weight: 700; margin-bottom: 2px; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-links a {
+    display: grid; place-items: center; width: 36px; height: 36px;
+    border: 1.5px solid var(--line-on-elevated); border-radius: 50%;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .footer-links a:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .footer-links svg { width: 16px; height: 16px; }
+</style>
+</head>
+<body>
+<main>
+
+<nav class="nav" aria-label="Primary navigation">
+  <a class="monogram" href="#top" aria-label="Leo Libin home">LL</a>
+  <div class="nav-links">
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="Leo-Libin-Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path></svg>
+    </button>
+    <a class="nav-cta" href="mailto:leolibin534@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6 12 13 2 6"></path><path d="M2 6h20v12H2z"></path></svg>
+      Let's talk
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-copy reveal-stagger">
+    <p class="availability"><i></i> Open to new opportunities</p>
+    <h1>Leo<br><em>Libin.</em></h1>
+    <p class="hero-role">Project Management <span>⁄</span> Operations Specialist</p>
+    <p class="hero-intro">I convert complex production workflows into clear, measurable systems — aligning people, process, and data so leadership can act with confidence.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="mailto:leolibin534@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6 12 13 2 6"></path><path d="M2 6h20v12H2z"></path></svg>
+        Start a conversation
+      </a>
+      <a class="button secondary" href="Leo-Libin-Resume.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+        Download résumé
+      </a>
+    </div>
+  </div>
+  <aside class="hero-panel" aria-label="Career highlights">
+    <div class="hero-photo">
+      <img src="leo-libin.png" alt="Portrait of Leo Libin" width="760" height="1021">
+    </div>
+    <div class="panel-kicker">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path></svg>
+      Career snapshot
+    </div>
+    <div class="stat"><strong>4+</strong><span>years of operations experience</span></div>
+    <div class="stat"><strong>2</strong><span>roles at TNQ Tech, one internal promotion</span></div>
+    <div class="stat"><strong>2024</strong><span>Best Employer of the Year recognition</span></div>
+    <div class="hero-location">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      Coimbatore, Tamil Nadu, India
+    </div>
+  </aside>
+</header>
+
+<section class="marquee" aria-label="Core capabilities">
+  <div class="marquee-track">
+    <span><span>Operational excellence</span><i>•</i><span>Data-driven decisions</span><i>•</i><span>Global delivery</span><i>•</i><span>Process leadership</span><i>•</i></span>
+    <span><span>Operational excellence</span><i>•</i><span>Data-driven decisions</span><i>•</i><span>Global delivery</span><i>•</i><span>Process leadership</span><i>•</i></span>
+  </div>
+</section>
+
+<section class="section about reveal" id="about">
+  <div class="section-title">
+    <p class="eyebrow">Profile</p>
+    <h2>Building clarity into every workflow.</h2>
+  </div>
+  <div class="about-content">
+    <p class="lead">A results-driven operations and project management specialist with four years leading end-to-end production workflows, embedding PMO discipline, and coordinating delivery across distributed, global teams.</p>
+    <p>My approach pairs advanced Excel and MIS automation with root-cause analysis and deliberate resource planning — removing bottlenecks, protecting quality, and giving leadership the clarity to act with confidence.</p>
+  </div>
+</section>
+
+<section class="section competencies reveal" aria-labelledby="competencies-title">
+  <p class="eyebrow" id="competencies-title">Core competencies</p>
+  <div class="competency-grid reveal-stagger">
+    <div class="competency"><span>01</span><p>Project &amp; Operations Management</p></div>
+    <div class="competency"><span>02</span><p>PMO Best Practices</p></div>
+    <div class="competency"><span>03</span><p>Process Improvement &amp; Optimization</p></div>
+    <div class="competency"><span>04</span><p>Stakeholder &amp; Vendor Management</p></div>
+    <div class="competency"><span>05</span><p>Root Cause Analysis</p></div>
+    <div class="competency"><span>06</span><p>KPI / OKR Tracking &amp; Reporting</p></div>
+    <div class="competency"><span>07</span><p>Resource &amp; Budget Planning</p></div>
+    <div class="competency"><span>08</span><p>Risk Mitigation &amp; Escalation</p></div>
+    <div class="competency"><span>09</span><p>Cross-Functional Team Leadership</p></div>
+    <div class="competency"><span>10</span><p>MIS &amp; Dashboard Automation</p></div>
+  </div>
+</section>
+
+<section class="section experience" id="experience">
+  <div class="wrap" style="padding:0; max-width:none;">
+    <div class="section-title reveal">
+      <p class="eyebrow">Experience</p>
+      <h2>One company. Two roles. A clear trajectory.</h2>
+    </div>
+    <div class="company-row reveal">
+      <div>
+        <p class="company">TNQ Tech</p>
+        <p>Coimbatore, India</p>
+      </div>
+      <p>December 2021 — Present</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-fill"></div>
+
+      <div class="tl-node current">
+        <span class="tl-dot"></span>
+        <span class="role-tag">Current role · Mar 2025 — Present</span>
+        <h3>Senior Operation Executive</h3>
+        <p class="role-dates">Where the impact compounds.</p>
+        <ul>
+          <li>Build and maintain project reports, performance dashboards, and automated MIS pipelines in advanced Excel, sharpening reporting turnaround and data accuracy.</li>
+          <li>Partner with distributed teams and technical delivery centres to resolve data inconsistencies and preserve cross-functional alignment across concurrent workstreams.</li>
+          <li>Track resource allocation, utilization, and budgeting data across internal platforms to support capacity planning and cost control.</li>
+          <li>Apply PMO best practices and root-cause analysis to remove operational bottlenecks and lift workflow efficiency.</li>
+        </ul>
+        <div class="impact"><span>Impact</span>Consistently surpassed departmental KPIs and delivery margins; automated MIS reporting cut manual turnaround time and sharpened the data leadership relies on.</div>
+      </div>
+
+      <div class="promotion-marker">
+        <span class="tl-dot"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"></path></svg>
+        <p><strong>Promoted from Operation Executive</strong> — March 2025, after consistent KPI performance and process leadership.</p>
+      </div>
+
+      <div class="tl-node">
+        <span class="tl-dot"></span>
+        <span class="role-tag">Dec 2021 — Feb 2025</span>
+        <h3>Operation Executive</h3>
+        <p class="role-dates">Where the foundation was built.</p>
+        <ul>
+          <li>Managed end-to-end client and internal communications, coordinating with production teams to deliver project files on schedule amid shifting priorities.</li>
+          <li>Owned digital production workflows — page proofing, content processing, and quality control — ensuring on-time submission of every deliverable.</li>
+          <li>Conducted quality checks on production artifacts and escalated critical issues to senior leadership for rapid resolution.</li>
+        </ul>
+        <div class="impact"><span>Impact</span>Strengthened on-time delivery and reduced downstream quality issues by catching production gaps early — laying the foundation for promotion within three years.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section skill-section reveal" id="skills">
+  <div class="section-title">
+    <p class="eyebrow">Toolkit</p>
+    <h2>Tools backed by operational judgment.</h2>
+  </div>
+  <div class="skills-groups">
+    <div class="skill-category">
+      <h3 class="skill-cat-title">Core Excel &amp; Automation</h3>
+      <div class="skill-bar-row" style="--pct:100%; --i:0" aria-label="MS Excel / VBA, 5 of 5">
+        <div class="skill-bar-head"><span>MS Excel / VBA</span><span class="skill-bar-rating">5/5</span></div>
+        <p class="skill-bar-desc">Automation &amp; dashboards</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:80%; --i:1" aria-label="Data and Workflow Integrity, 4 of 5">
+        <div class="skill-bar-head"><span>Data &amp; Workflow Integrity</span><span class="skill-bar-rating">4/5</span></div>
+        <p class="skill-bar-desc">Quality assurance</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-cat-title">Delivery &amp; Coordination</h3>
+      <div class="skill-bar-row" style="--pct:100%; --i:0" aria-label="Stakeholder Management, 5 of 5">
+        <div class="skill-bar-head"><span>Stakeholder Management</span><span class="skill-bar-rating">5/5</span></div>
+        <p class="skill-bar-desc">Process optimization</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:80%; --i:1" aria-label="JIRA, 4 of 5">
+        <div class="skill-bar-head"><span>JIRA</span><span class="skill-bar-rating">4/5</span></div>
+        <p class="skill-bar-desc">Workflow management</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:80%; --i:2" aria-label="MS Word / PowerPoint, 4 of 5">
+        <div class="skill-bar-head"><span>MS Word / PowerPoint</span><span class="skill-bar-rating">4/5</span></div>
+        <p class="skill-bar-desc">Business communication</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:60%; --i:3" aria-label="Workfront, 3 of 5">
+        <div class="skill-bar-head"><span>Workfront</span><span class="skill-bar-rating">3/5</span></div>
+        <p class="skill-bar-desc">Project coordination</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3 class="skill-cat-title">Reporting &amp; Analytics</h3>
+      <div class="skill-bar-row" style="--pct:80%; --i:0" aria-label="KPI / OKR Tracking, 4 of 5">
+        <div class="skill-bar-head"><span>KPI / OKR Tracking</span><span class="skill-bar-rating">4/5</span></div>
+        <p class="skill-bar-desc">Performance reporting</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:80%; --i:1" aria-label="Root Cause Analysis, 4 of 5">
+        <div class="skill-bar-head"><span>Root Cause Analysis</span><span class="skill-bar-rating">4/5</span></div>
+        <p class="skill-bar-desc">Issue resolution</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:60%; --i:2" aria-label="Power BI, 3 of 5">
+        <div class="skill-bar-head"><span>Power BI</span><span class="skill-bar-rating">3/5</span></div>
+        <p class="skill-bar-desc">Reporting &amp; analysis</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+      <div class="skill-bar-row" style="--pct:60%; --i:3" aria-label="Looker Studio, 3 of 5">
+        <div class="skill-bar-head"><span>Looker Studio</span><span class="skill-bar-rating">3/5</span></div>
+        <p class="skill-bar-desc">Dashboarding</p>
+        <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section education" id="education">
+  <div class="section-title reveal">
+    <p class="eyebrow">Education &amp; Recognition</p>
+    <h2>Education, learning &amp; recognition.</h2>
+  </div>
+  <div class="foundation-grid reveal-stagger">
+    <article class="foundation-card education-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 10-10-5L2 10l10 5 10-5Z"></path><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"></path></svg>
+      <p class="card-label">Education</p>
+      <h3>Bachelor of Commerce in Professional Accounting</h3>
+      <p>Sri Ramakrishna College · 2018—2021</p>
+      <strong>GPA: 74%</strong>
+    </article>
+    <article class="foundation-card award-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"></path></svg>
+      <p class="card-label">Recognition</p>
+      <h3>Best Employer of the Year</h3>
+      <p>TNQ Tech · 2024</p>
+      <p>Recognized for exceptional performance, process adherence, and surpassing departmental KPIs.</p>
+    </article>
+    <article class="foundation-card cert-card">
+      <p class="card-label">Certifications</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Problem Solving and Decision Making</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Business Analytics for Decision Making</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>International Business – 1</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Successful Negotiation: Essential Strategies and Skills</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Advanced Excel Certification</li>
+      </ul>
+      <p class="providers">Coursera · E-Learn Markets</p>
+    </article>
+  </div>
+</section>
+
+<section class="contact reveal" id="contact">
+  <div>
+    <p class="eyebrow">Contact</p>
+    <h2>Let's improve<br>what happens <em>next.</em></h2>
+  </div>
+  <a class="contact-card" href="mailto:leolibin534@gmail.com">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6 12 13 2 6"></path><path d="M2 6h20v12H2z"></path></svg>
+    <span><strong>Email me</strong><small>leolibin534@gmail.com</small></span>
+  </a>
+</section>
+
+<footer>
+  <a class="monogram inverted" href="#top">LL</a>
+  <div class="footer-meta">
+    <p>Leo Libin · Project Management &amp; Operations Specialist</p>
+    <p>Coimbatore, India</p>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:leolibin534@gmail.com" aria-label="Email Leo Libin">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6 12 13 2 6"></path><path d="M2 6h20v12H2z"></path></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/leo-libin-a1b166206/" target="_blank" rel="noopener" aria-label="Leo Libin on LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 11v5M8 8v.01M12 16v-5M12 11c1.2-1.4 4-1.3 4 1v4"></path></svg>
+    </a>
+  </div>
+</footer>
+
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var toggle = document.getElementById('themeToggle');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function applyTheme(isDark) {
+    root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    toggle.setAttribute('aria-pressed', String(isDark));
+  }
+  applyTheme(prefersDark.matches);
+  prefersDark.addEventListener('change', function (e) {
+    if (!toggle.dataset.manual) applyTheme(e.matches);
+  });
+  toggle.addEventListener('click', function () {
+    var isDark = root.getAttribute('data-theme') === 'dark';
+    toggle.dataset.manual = 'true';
+    applyTheme(!isDark);
+  });
+
+  var revealEls = document.querySelectorAll('.reveal, .reveal-stagger, .skill-bar-row, .tl-node, .timeline');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(function (el) { io.observe(el); });
+
+  // Hero entrance runs immediately on load
+  window.requestAnimationFrame(function () {
+    document.querySelector('.hero-copy').classList.add('in-view');
+  });
+})();
+</script>
+</body>
+</html>
